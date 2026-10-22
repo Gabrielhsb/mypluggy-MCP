@@ -1,0 +1,17 @@
+node_modules/
+dist/
+data/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Arquivos de ferramentas de IA / editores
+.claude/
+CLAUDE.md
+AGENTS.md
+graphify-out/
+docs/superpowers/
+.vscode/
+.idea/

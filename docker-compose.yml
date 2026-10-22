@@ -1,0 +1,35 @@
+services:
+  mcp:
+    build: .
+    restart: always
+    env_file: .env
+    environment:
+      PORT: 3000
+      DATA_DIR: /data
+    volumes:
+      - mcp-data:/data
+    # Só na máquina local: quem expõe para a internet é o proxy (Caddy abaixo ou seu nginx).
+    ports:
+      - "127.0.0.1:${MCP_HOST_PORT:-3000}:3000"
+
+  # Proxy com HTTPS automático (Let's Encrypt). Suba com: docker compose --profile caddy up -d
+  # Pule este serviço se a máquina já tem nginx/Caddy nas portas 80/443.
+  caddy:
+    image: caddy:2-alpine
+    profiles: ["caddy"]
+    restart: always
+    depends_on: [mcp]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      MCP_DOMAIN: ${MCP_DOMAIN:?defina MCP_DOMAIN no .env}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  mcp-data:
+  caddy-data:
+  caddy-config:
