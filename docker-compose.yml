@@ -23,7 +23,8 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      MCP_DOMAIN: ${MCP_DOMAIN:?defina MCP_DOMAIN no .env}
+      # Sem :? aqui: o compose interpola todos os serviços, mesmo com o profile desligado.
+      MCP_DOMAIN: ${MCP_DOMAIN:-}
     volumes:
       - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy-data:/data
