@@ -23,13 +23,13 @@ Conecte suas contas bancárias brasileiras ao Claude via Open Finance, com segur
 
 - [O que é](#-o-que-é)
 - [O que dá pra perguntar](#-o-que-dá-pra-perguntar)
-- [Como funciona](#️-como-funciona)
+- [Como funciona](#-como-funciona)
 - [Ferramentas disponíveis](#-ferramentas-disponíveis)
 - [O que você vai precisar](#-o-que-você-vai-precisar)
 - [Instalação passo a passo](#-instalação-passo-a-passo)
 - [Segurança e privacidade](#-segurança-e-privacidade)
 - [Perguntas frequentes](#-perguntas-frequentes)
-- [Limitações](#️-limitações)
+- [Limitações](#-limitações)
 - [Desenvolvimento](#-desenvolvimento)
 
 ---
@@ -71,7 +71,7 @@ O Claude escolhe sozinho qual ferramenta usar, cruza os dados e responde com an�
 
 ---
 
-## ⚙️ Como funciona
+## 🔧 Como funciona
 
 ```mermaid
 flowchart LR
@@ -207,7 +207,7 @@ sudo ufw allow 22,80,443/tcp && sudo ufw enable
 
 ---
 
-## 🛡️ Segurança e privacidade
+## 🔐 Segurança e privacidade
 
 | | Proteção |
 |:-:|---|
@@ -275,7 +275,7 @@ cd mypluggy-MCP && git pull && docker compose up -d --build
 
 ---
 
-## ⚠️ Limitações
+## 🚧 Limitações
 
 - 💳 O Pluggy não entrega o **valor da fatura aberta**, só o vencimento e o mínimo. As faturas fechadas vêm completas. Para o valor parcial, peça ao Claude para somar as transações do cartão desde o último fechamento.
 - 🕐 Os dados do Meu Pluggy são atualizados cerca de uma vez por dia.
@@ -283,7 +283,7 @@ cd mypluggy-MCP && git pull && docker compose up -d --build
 
 ---
 
-## 🧑‍💻 Desenvolvimento
+## 💻 Desenvolvimento
 
 Requer **Node.js 20.6+**.
 

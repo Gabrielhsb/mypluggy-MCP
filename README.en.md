@@ -23,13 +23,13 @@ Connect your Brazilian bank accounts to Claude through Open Finance, securely an
 
 - [What it is](#-what-it-is)
 - [What you can ask](#-what-you-can-ask)
-- [How it works](#️-how-it-works)
+- [How it works](#-how-it-works)
 - [Available tools](#-available-tools)
 - [What you'll need](#-what-youll-need)
 - [Step-by-step setup](#-step-by-step-setup)
-- [Security and privacy](#️-security-and-privacy)
+- [Security and privacy](#-security-and-privacy)
 - [FAQ](#-faq)
-- [Limitations](#️-limitations)
+- [Limitations](#-limitations)
 - [Development](#-development)
 
 ---
@@ -71,7 +71,7 @@ Claude picks the right tool on its own, combines the data and answers with analy
 
 ---
 
-## ⚙️ How it works
+## 🔧 How it works
 
 ```mermaid
 flowchart LR
@@ -207,7 +207,7 @@ sudo ufw allow 22,80,443/tcp && sudo ufw enable
 
 ---
 
-## 🛡️ Security and privacy
+## 🔐 Security and privacy
 
 | | Protection |
 |:-:|---|
@@ -275,7 +275,7 @@ cd mypluggy-MCP && git pull && docker compose up -d --build
 
 ---
 
-## ⚠️ Limitations
+## 🚧 Limitations
 
 - 💳 Pluggy doesn't provide the **open bill amount**, only its due date and minimum payment. Closed bills come complete. For a partial total, ask Claude to sum the card's transactions since the last closing date.
 - 🕐 Meu Pluggy data is refreshed about once a day.
@@ -283,7 +283,7 @@ cd mypluggy-MCP && git pull && docker compose up -d --build
 
 ---
 
-## 🧑‍💻 Development
+## 💻 Development
 
 Requires **Node.js 20.6+**.
 
